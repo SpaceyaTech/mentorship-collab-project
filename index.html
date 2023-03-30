@@ -11,12 +11,35 @@
 </head>
 <body>
   <main>
-    You’ve used 815 GB of your storage
 
-  185 GB Left
-  
-  0 GB
-  1000 GB
+    <section class="main__storage">
+      <!-- On second thought, using the <progress> element might have been a better idea so i saved it here to edit as I need to push and make a PR pbefore today's session  -->
+      <!-- <label for="main__progressbar">You’ve used <strong>815 GB</strong> of your storage</label>
+      <br>
+      <progress id="main__progressbar" class="main__progressbar" max="1000" value="815">815</progress> -->
+
+      <p class="main__para">You’ve used <span class="main__para--bold">815 GB</span> of your storage</p>
+      <br>
+
+      <div class="main__bar">
+        <span class="main__progressbar">
+          <div class="main__innercircle"></div>
+        </span>
+      </div>
+
+      <div class="main__gb">
+        <p>0 GB</p>
+        <p>1000 GB</p>
+      </div>
+
+      <div class="main__GBleft">
+        <p><span class="main__span--bold">185</span> GB LEFT</p>
+      </div>
+
+      
+
+    
+    </section>
 
   </main>
   <div>
