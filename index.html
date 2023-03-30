@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./styles/app.css"/>
+  <link rel="stylesheet" href="./styles/app.css" />
   <title>Fylo data storage component</title>
 
 </head>
+
 <body>
   <main>
+
+    <section class="main__heading">
+      <div class="main__logo">
+        <img src="./images/logo.svg" alt="Flyo Logo">
+      </div>
+
+      <div class="main__icons">
+        <img src="./images/icon-document.svg" alt="">
+        <img src="./images/icon-folder.svg" alt="">
+        <img src="./images/icon-upload.svg" alt="">
+      </div>
+    </section>
 
     <section class="main__storage">
       <!-- On second thought, using the <progress> element might have been a better idea so i saved it here to edit as I need to push and make a PR pbefore today's session  -->
@@ -36,14 +51,11 @@
         <p><span class="main__span--bold">185</span> GB LEFT</p>
       </div>
 
-      
-
-    
     </section>
 
   </main>
   <div>
-    storage component
-  </div>  
+  </div>
 </body>
+
 </html>

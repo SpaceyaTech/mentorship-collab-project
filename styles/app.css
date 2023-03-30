@@ -80,10 +80,9 @@ h6 {
   isolation: isolate;
 }
 
-<<<<<<< HEAD
 /* Make main a flex container */
 main {
-  min-height: 100vh;
+  min-height: 100%;
   background-image: url(../images/bg-mobile.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -91,7 +90,29 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 1em;
   align-items: center;
+}
+
+.main__heading {
+  background-color: var(--dark-blue);
+  padding: 3em;
+  border-radius: 1em;
+  border-top-right-radius: 9em;
+  width: 90%;
+}
+
+.main__icons {
+  padding-top: 3em;
+  display: flex;
+  justify-content: space-around;
+  width: 75%;
+}
+
+.main__icons > img {
+  background-color: var(--very-dark-blue);
+  padding: 1em;
+  border-radius: 0.625em;
 }
 
 .main__storage {
@@ -159,20 +180,34 @@ main {
   border-radius: 1em;
   position: absolute;
   width: 50%;
-  top: 29em;
+  top: 35em;
 }
 
 .main__span--bold {
   font-size: xx-large;
   font-weight: 700;
 }
-=======
-  main{
-    min-height: 100vh;
-    background-image: url(../images/bg-mobile.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+
+
+@media screen and (min-width: 48em) {
+
+  main {
+    flex-direction: row;
+    justify-content: center;
+    background-image: url(../images/bg-desktop.png);
   }
-  
->>>>>>> main
+
+  .main__heading {
+    width: 25%;
+  }
+
+  .main__storage {
+    width: 50%;
+  }
+
+ .main__GBleft {
+    top: 11em;
+    right: 15em;
+    width: 15%;
+ }
+}
