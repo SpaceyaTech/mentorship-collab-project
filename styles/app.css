@@ -80,6 +80,7 @@ h6 {
   isolation: isolate;
 }
 
+<<<<<<< HEAD
 /* Make main a flex container */
 main {
   min-height: 100vh;
@@ -165,3 +166,13 @@ main {
   font-size: xx-large;
   font-weight: 700;
 }
+=======
+  main{
+    min-height: 100vh;
+    background-image: url(../images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+>>>>>>> main
