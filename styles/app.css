@@ -53,14 +53,14 @@
 
   main{
     min-height: 100vh;
-    background-image: url(../images/bg-desktop.png);
+    background-image: url(../images/bg-mobile.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
-  @media only screen and (max-width: 768px){
+  @media only screen and (min-width: 768px){
     main{
-      background-image: url(../images/bg-mobile.png);
+      background-image: url(../images/bg-desktop.png);
     }
   }
   
