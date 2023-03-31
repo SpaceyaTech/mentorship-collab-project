@@ -205,9 +205,18 @@ main {
     width: 50%;
   }
 
+  @media only screen and (min-width: 768px){
+    main{
+      background-image: url(../images/bg-desktop.png);
+    }
+  }
+  
+
+
  .main__GBleft {
     top: 11em;
     right: 15em;
     width: 15%;
  }
 }
+
