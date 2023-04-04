@@ -1,66 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+:root {
+  --pale-blue: hsl(243, 100%, 93%);
+  --grayish-blue: hsl(229, 7%, 55%);
+  --dark-blue: hsl(228, 56%, 26%);
+  --very-dark-blue: hsl(229, 57%, 11%);
+}
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  /*
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
     2. Remove default margin
   */
-  * {
-    margin: 0;
-  }
-  /*
+* {
+  margin: 0;
+}
+/*
     3. Allow percentage-based heights in the application
   */
-  html, body {
-    height: 100%;
-  }
-  /*
+html,
+body {
+  height: 100%;
+}
+/*
     Typographic tweaks!
     4. Add accessible line-height
     5. Improve text rendering
   */
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
-  /*
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  color: #fff;
+}
+/*
     6. Improve media defaults
   */
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  /*
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
     7. Remove built-in form typography styles
   */
-  input, button, textarea, select {
-    font: inherit;
-  }
-  /*
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
     8. Avoid text overflows
   */
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  /*
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
     9. Create a root stacking context
   */
-  #root, #__next {
-    isolation: isolate;
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Make main a flex container */
+main {
+  min-height: 100%;
+  background-image: url(../images/bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+  align-items: center;
+}
+
+.main__heading {
+  background-color: var(--dark-blue);
+  padding: 3em;
+  border-radius: 1em;
+  border-top-right-radius: 9em;
+  width: 90%;
+}
+
+.main__icons {
+  padding-top: 3em;
+  display: flex;
+  justify-content: space-around;
+  width: 75%;
+}
+
+.main__icons > img {
+  background-color: var(--very-dark-blue);
+  padding: 1em;
+  border-radius: 0.625em;
+}
+
+.main__storage {
+  background-color: var(--dark-blue);
+  padding: 5em;
+  border-radius: 1em;
+  width: 90%;
+}
+
+.main__para--bold {
+  font-weight: 700;
+}
+
+.main__bar {
+  width: 100%;
+  box-sizing: content-box;
+  height: 1em;
+  position: relative;
+  margin: 0.125em 0 0.125em 0;
+  background-color: var(--very-dark-blue);
+  border-radius: 1em;
+  padding: 0.0625em;
+}
+
+.main__progressbar {
+  width: 81.5%;
+  display: block;
+  height: 100%;
+  border-radius: 0.8em;
+  background-image: linear-gradient(
+    to right,
+    hsl(6, 100%, 80%),
+    hsl(335, 100%, 65%)
+  );
+  position: relative;
+  overflow: hidden;
+
+  /*make flex item so that the white circle moves to the end */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main__innercircle {
+  width: 1em;
+  height: 1em;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.main__gb {
+  font-size: x-small;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main__GBleft {
+  height: 5em;
+  background-color: #fff;
+  color: var(--very-dark-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1em;
+  position: absolute;
+  width: 50%;
+  top: 35em;
+}
+
+.main__span--bold {
+  font-size: xx-large;
+  font-weight: 700;
+}
+
+
+@media screen and (min-width: 48em) {
+
+  main {
+    flex-direction: row;
+    justify-content: center;
+    background-image: url(../images/bg-desktop.png);
   }
 
-  main{
-    min-height: 100vh;
-    background-image: url(../images/bg-mobile.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  .main__heading {
+    width: 25%;
   }
-  @media only screen and (min-width: 768px){
-    main{
-      background-image: url(../images/bg-desktop.png);
-    }
+
+  .main__storage {
+    width: 50%;
   }
-  
