@@ -204,10 +204,3 @@ main {
   .main__storage {
     width: 50%;
   }
-
- .main__GBleft {
-    top: 11em;
-    right: 15em;
-    width: 15%;
- }
-}
